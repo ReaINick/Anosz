@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>The Baseline System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="app-bar">
+    <div class="logo">Baseline<span>.</span></div>
+    <div class="flex items-center gap-8">
+      <span class="streak-badge">🔥 7-Day Streak</span>
+      <div class="avatar">RN</div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-wrapper">
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="greeting">Good morning, RealNick 👋</p>
+      <h1>What would you like to<br/><span>improve</span> in you?</h1>
+      <p class="sub-text">You're 1 minute away from your next win.</p>
+    </section>
+
+    <!-- XP Bar -->
+    <div class="xp-bar-wrap">
+      <div class="xp-meta">
+        <span class="level-badge">⚡ Level 3</span>
+        <span class="xp-txt">240 / 500 XP</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill xp-fill" style="width: 48%"></div>
+      </div>
+    </div>
+
+    <!-- 1-Minute Start Card -->
+    <div class="card mt-16">
+      <div class="card-header">
+        <div>
+          <h3>⏱ Start in 60 Seconds</h3>
+          <p class="mt-4" style="font-size:.78rem;">Pick a goal below, then hit start.</p>
+        </div>
+        <button id="timer-start" class="btn btn-primary btn-sm">▶ Start 1-Min</button>
+      </div>
+      <div class="timer-ring">
+        <div class="inner">60</div>
+      </div>
+    </div>
+
+    <!-- Today's Goals -->
+    <div class="card mt-16">
+      <div class="card-header">
+        <h3>Today's Goals</h3>
+        <a href="goals.html" class="text-sm text-action font-bold">+ Add</a>
+      </div>
+
+      <!-- Goal: Cleaning -->
+      <div class="goal-row">
+        <div class="goal-icon" style="background:#EFF6FF;">🧹</div>
+        <div class="goal-info">
+          <div class="name">Quick Room Clean</div>
+          <div class="sub">1-min start • 3 days left this week</div>
+          <div class="progress-track" style="height:6px;">
+            <div class="progress-fill green" data-base="60%" style="width:60%;"></div>
+          </div>
+        </div>
+        <button class="goal-check done" aria-label="Mark done">✓</button>
+      </div>
+
+      <!-- Goal: Reading -->
+      <div class="goal-row">
+        <div class="goal-icon" style="background:#ECFDF5;">📖</div>
+        <div class="goal-info">
+          <div class="name">Read 10 Pages</div>
+          <div class="sub">1-min start • Daily</div>
+          <div class="progress-track" style="height:6px;">
+            <div class="progress-fill" data-base="30%" style="width:30%;"></div>
+          </div>
+        </div>
+        <button class="goal-check" aria-label="Mark done"></button>
+      </div>
+
+      <!-- Goal: Meditation -->
+      <div class="goal-row">
+        <div class="goal-icon" style="background:#F5F3FF;">🧘</div>
+        <div class="goal-info">
+          <div class="name">5-Min Meditation</div>
+          <div class="sub">1-min start • Daily</div>
+          <div class="progress-track" style="height:6px;">
+            <div class="progress-fill" data-base="0%" style="width:0%;"></div>
+          </div>
+        </div>
+        <button class="goal-check" aria-label="Mark done"></button>
+      </div>
+
+      <!-- Goal: Walk -->
+      <div class="goal-row">
+        <div class="goal-icon" style="background:#FFF7ED;">🚶</div>
+        <div class="goal-info">
+          <div class="name">Evening Walk</div>
+          <div class="sub">1-min start • 5x per week</div>
+          <div class="progress-track" style="height:6px;">
+            <div class="progress-fill green" data-base="80%" style="width:80%;"></div>
+          </div>
+        </div>
+        <button class="goal-check" aria-label="Mark done"></button>
+      </div>
+    </div>
+
+    <!-- Merciful Streak Notice -->
+    <div class="card mt-12" style="background:var(--warning-light); border-color: #FDE68A;">
+      <div class="flex items-center gap-12">
+        <span style="font-size:1.6rem;">🛡️</span>
+        <div>
+          <h3 style="font-size:.9rem;">Streak Shield Active</h3>
+          <p style="font-size:.78rem; margin-top:2px;">Missed yesterday? No shame — your streak is protected. One miss never breaks the system.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="mt-20 mb-16 flex gap-12" style="flex-wrap:wrap;">
+      <a href="realize.html" class="btn btn-ghost btn-sm">📚 Why It Works</a>
+      <a href="social.html"  class="btn btn-ghost btn-sm">🏆 My League</a>
+      <a href="goals.html"   class="btn btn-ghost btn-sm">🗺️ Mastery Paths</a>
+    </div>
+
+  </main>
+
+  <!-- Bottom / Sidebar Nav -->
+  <nav class="bottom-nav">
+    <span class="nav-brand" style="display:none;">Baseline.</span>
+    <a href="index.html"   class="nav-item active"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a>
+    <a href="social.html"  class="nav-item"><span class="nav-icon">📈</span><span class="nav-label">Progress</span></a>
+    <a href="realize.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label">Guide</span></a>
+    <a href="goals.html"   class="nav-item"><span class="nav-icon">🗺️</span><span class="nav-label">Paths</span></a>
+  </nav>
+
+  <script src="layout.js"></script>
+</body>
+</html>
