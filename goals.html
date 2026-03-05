@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Mastery Paths – Baseline</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="app-bar">
+    <div class="logo">Baseline<span>.</span></div>
+    <div class="avatar">RN</div>
+  </header>
+
+  <main class="page-wrapper">
+
+    <section class="hero">
+      <p class="greeting">Mastery Paths</p>
+      <h1>Build your <span>Library.</span></h1>
+      <p class="sub-text">Ranked from "Start Here" to "Expert." Add paths to your dashboard.</p>
+    </section>
+
+    <!-- Filter Tags -->
+    <div class="flex gap-8 mt-16 mb-16" style="overflow-x:auto; padding-bottom:4px; flex-wrap:nowrap;">
+      <button class="tag tag-blue" style="flex-shrink:0;">All</button>
+      <button class="tag tag-gray" style="flex-shrink:0;">🧹 Home</button>
+      <button class="tag tag-gray" style="flex-shrink:0;">🧠 Mind</button>
+      <button class="tag tag-gray" style="flex-shrink:0;">💪 Body</button>
+      <button class="tag tag-gray" style="flex-shrink:0;">💰 Finance</button>
+      <button class="tag tag-gray" style="flex-shrink:0;">📖 Learning</button>
+    </div>
+
+    <!-- START HERE -->
+    <p class="section-title">🟢 Start Here</p>
+    <div class="mastery-grid">
+      <div class="mastery-card" onclick="openModal('modal-cleaning')">
+        <div class="m-icon">🧹</div>
+        <div class="m-name">Room Clean</div>
+        <div class="m-desc">1 minute to start. Clutter-free space, clear mind.</div>
+        <div class="m-level"><span class="tag tag-green">Beginner</span></div>
+      </div>
+      <div class="mastery-card" onclick="openModal('modal-reading')">
+        <div class="m-icon">📖</div>
+        <div class="m-name">Daily Reading</div>
+        <div class="m-desc">10 pages a day. 3,650 pages a year.</div>
+        <div class="m-level"><span class="tag tag-green">Beginner</span></div>
+      </div>
+      <div class="mastery-card">
+        <div class="m-icon">💧</div>
+        <div class="m-name">Hydration</div>
+        <div class="m-desc">8 glasses. Start by filling a bottle right now.</div>
+        <div class="m-level"><span class="tag tag-green">Beginner</span></div>
+      </div>
+      <div class="mastery-card">
+        <div class="m-icon">🛏️</div>
+        <div class="m-name">Make Your Bed</div>
+        <div class="m-desc">First win of the day — takes under 60 seconds.</div>
+        <div class="m-level"><span class="tag tag-green">Beginner</span></div>
+      </div>
+    </div>
+
+    <!-- INTERMEDIATE -->
+    <p class="section-title mt-24">🔵 Intermediate</p>
+    <div class="mastery-grid">
+      <div class="mastery-card">
+        <div class="m-icon">🧘</div>
+        <div class="m-name">Meditation</div>
+        <div class="m-desc">From 1 minute to an hour. Silence rewires you.</div>
+        <div class="m-level"><span class="tag tag-blue">Intermediate</span></div>
+      </div>
+      <div class="mastery-card">
+        <div class="m-icon">🚶</div>
+        <div class="m-name">Daily Walk</div>
+        <div class="m-desc">Step outside. Even 10 minutes moves the needle.</div>
+        <div class="m-level"><span class="tag tag-blue">Intermediate</span></div>
+      </div>
+      <div class="mastery-card">
+        <div class="m-icon">💰</div>
+        <div class="m-name">Budget Tracker</div>
+        <div class="m-desc">Log one transaction today. Awareness is wealth.</div>
+        <div class="m-level"><span class="tag tag-blue">Intermediate</span></div>
+      </div>
+      <div class="mastery-card">
+        <div class="m-icon">🥗</div>
+        <div class="m-name">Meal Prep</div>
+        <div class="m-desc">Plan one meal ahead. Saves money and willpower.</div>
+        <div class="m-level"><span class="tag tag-blue">Intermediate</span></div>
+      </div>
+    </div>
+
+    <!-- EXPERT -->
+    <p class="section-title mt-24">🟣 Expert</p>
+    <div class="mastery-grid">
+      <div class="mastery-card">
+        <div class="m-icon">📓</div>
+        <div class="m-name">Journaling</div>
+        <div class="m-desc">Daily reflection builds the identity you want.</div>
+        <div class="m-level"><span class="tag" style="background:#F3E8FF;color:#7C3AED;">Expert</span></div>
+      </div>
+      <div class="mastery-card">
+        <div class="m-icon">💪</div>
+        <div class="m-name">Strength Train</div>
+        <div class="m-desc">Progressive overload. 3x per week minimum.</div>
+        <div class="m-level"><span class="tag" style="background:#F3E8FF;color:#7C3AED;">Expert</span></div>
+      </div>
+      <div class="mastery-card">
+        <div class="m-icon">📚</div>
+        <div class="m-name">Deep Study</div>
+        <div class="m-desc">Deliberate practice in your chosen field.</div>
+        <div class="m-level"><span class="tag" style="background:#F3E8FF;color:#7C3AED;">Expert</span></div>
+      </div>
+      <div class="mastery-card">
+        <div class="m-icon">🌅</div>
+        <div class="m-name">Morning Ritual</div>
+        <div class="m-desc">Stack 3+ habits into a system that runs itself.</div>
+        <div class="m-level"><span class="tag" style="background:#F3E8FF;color:#7C3AED;">Expert</span></div>
+      </div>
+    </div>
+
+    <div style="height:24px;"></div>
+
+  </main>
+
+  <!-- Modal: Cleaning -->
+  <div class="modal-overlay" id="modal-cleaning">
+    <div class="modal-sheet">
+      <span class="modal-handle"></span>
+      <div style="font-size:2rem; text-align:center; margin-bottom:12px;">🧹</div>
+      <h2 class="text-center">Room Clean</h2>
+      <p class="text-center mt-8">Set a 60-second timer. Tidy one surface. That's it. The rest will follow.</p>
+      <div class="divider"></div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="flex items-center gap-8 text-sm"><span>⏱</span> 60-second start rule</div>
+        <div class="flex items-center gap-8 text-sm"><span>📈</span> Unlocks "Deep Clean" at Level 5</div>
+        <div class="flex items-center gap-8 text-sm"><span>🔥</span> +15 XP per session</div>
+      </div>
+      <button class="btn btn-primary btn-block mt-20" onclick="closeModal('modal-cleaning'); showToast('🧹 Room Clean added to Today!')">+ Add to Today</button>
+      <button class="btn btn-ghost btn-block mt-8" onclick="closeModal('modal-cleaning')">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Modal: Reading -->
+  <div class="modal-overlay" id="modal-reading">
+    <div class="modal-sheet">
+      <span class="modal-handle"></span>
+      <div style="font-size:2rem; text-align:center; margin-bottom:12px;">📖</div>
+      <h2 class="text-center">Daily Reading</h2>
+      <p class="text-center mt-8">Open the book. Read one sentence. You'll read ten pages before you realize it.</p>
+      <div class="divider"></div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="flex items-center gap-8 text-sm"><span>⏱</span> 60-second start rule</div>
+        <div class="flex items-center gap-8 text-sm"><span>📈</span> Unlocks "Book Summary" at Level 4</div>
+        <div class="flex items-center gap-8 text-sm"><span>🔥</span> +10 XP per session</div>
+      </div>
+      <button class="btn btn-primary btn-block mt-20" onclick="closeModal('modal-reading'); showToast('📖 Daily Reading added to Today!')">+ Add to Today</button>
+      <button class="btn btn-ghost btn-block mt-8" onclick="closeModal('modal-reading')">Cancel</button>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <span class="nav-brand" style="display:none;">Baseline.</span>
+    <a href="index.html"   class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a>
+    <a href="social.html"  class="nav-item"><span class="nav-icon">📈</span><span class="nav-label">Progress</span></a>
+    <a href="realize.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label">Guide</span></a>
+    <a href="goals.html"   class="nav-item active"><span class="nav-icon">🗺️</span><span class="nav-label">Paths</span></a>
+  </nav>
+
+  <script src="layout.js"></script>
+</body>
+</html>

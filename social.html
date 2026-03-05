@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>My League – Baseline</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="app-bar">
+    <div class="logo">Baseline<span>.</span></div>
+    <div class="flex items-center gap-8">
+      <span class="streak-badge">🔥 7-Day Streak</span>
+      <div class="avatar">RN</div>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+
+    <section class="hero">
+      <p class="greeting">Accountability Hub</p>
+      <h1>Your <span>League.</span></h1>
+      <p class="sub-text">Anonymous local rankings — only people within 100 points of you.</p>
+    </section>
+
+    <!-- League Tier Badge -->
+    <div class="card mt-16" style="background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border-color: var(--action);">
+      <div class="flex items-center gap-12">
+        <span style="font-size:2.2rem;">⚔️</span>
+        <div style="flex:1;">
+          <div style="font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--action);margin-bottom:2px;">Current Division</div>
+          <div style="font-size:1.2rem;font-weight:800;">Silver League II</div>
+          <div style="font-size:.78rem;color:var(--text-secondary);margin-top:2px;">Top 24% of active users this week</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:1.4rem;font-weight:800;color:var(--action);">340</div>
+          <div style="font-size:.72rem;color:var(--text-muted);">Your XP</div>
+        </div>
+      </div>
+      <div class="progress-track mt-12">
+        <div class="progress-fill" style="width:68%;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--text-muted);margin-top:4px;">
+        <span>Silver II</span><span>60 XP to Gold III</span>
+      </div>
+    </div>
+
+    <!-- Progress Stats -->
+    <div class="mt-16 flex gap-12" style="display:grid;grid-template-columns:1fr 1fr 1fr;">
+      <div class="card text-center" style="padding:14px 8px;">
+        <div style="font-size:1.4rem;font-weight:800;color:var(--action);">7</div>
+        <div style="font-size:.7rem;color:var(--text-muted);margin-top:2px;">Day Streak</div>
+      </div>
+      <div class="card text-center" style="padding:14px 8px;">
+        <div style="font-size:1.4rem;font-weight:800;color:var(--success);">18</div>
+        <div style="font-size:.7rem;color:var(--text-muted);margin-top:2px;">Goals Done</div>
+      </div>
+      <div class="card text-center" style="padding:14px 8px;">
+        <div style="font-size:1.4rem;font-weight:800;color:var(--warning);">340</div>
+        <div style="font-size:.7rem;color:var(--text-muted);margin-top:2px;">Total XP</div>
+      </div>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="card mt-16">
+      <div class="card-header">
+        <h3>🏆 Local League</h3>
+        <span class="tag tag-gray" style="font-size:.7rem;">Anonymous</span>
+      </div>
+
+      <!-- Rank 1 – Gold gradient border -->
+      <div class="league-row rank-1 mb-8">
+        <div class="league-rank">🥇</div>
+        <div class="league-avatar" style="background:var(--gold);">AK</div>
+        <div class="league-name">AK_builder</div>
+        <span class="delta-chip delta-up">+12 ↑</span>
+        <div class="league-pts">440 XP</div>
+      </div>
+
+      <!-- Rank 2 – Silver gradient border -->
+      <div class="league-row rank-2 mb-8">
+        <div class="league-rank">🥈</div>
+        <div class="league-avatar" style="background:var(--silver);">MX</div>
+        <div class="league-name">MX_silent</div>
+        <span class="delta-chip delta-up">+5 ↑</span>
+        <div class="league-pts">415 XP</div>
+      </div>
+
+      <!-- Rank 3 – Bronze gradient border -->
+      <div class="league-row rank-3 mb-8">
+        <div class="league-rank">🥉</div>
+        <div class="league-avatar" style="background:var(--bronze);color:#fff;">TR</div>
+        <div class="league-name">TR_steady</div>
+        <span class="delta-chip delta-down">-2 ↓</span>
+        <div class="league-pts">395 XP</div>
+      </div>
+
+      <div class="divider" style="margin:10px 0;"></div>
+
+      <!-- Ranks 4-6: just above user -->
+      <div class="league-row">
+        <div class="league-rank">4</div>
+        <div class="league-avatar" style="background:#8B5CF6;">JS</div>
+        <div class="league-name">JS_focus</div>
+        <span class="delta-chip delta-up">+8 ↑</span>
+        <div class="league-pts">378 XP</div>
+      </div>
+      <div class="league-row">
+        <div class="league-rank">5</div>
+        <div class="league-avatar" style="background:#EC4899;">LP</div>
+        <div class="league-name">LP_grind</div>
+        <span class="delta-chip delta-down">-1 ↓</span>
+        <div class="league-pts">361 XP</div>
+      </div>
+      <div class="league-row">
+        <div class="league-rank">6</div>
+        <div class="league-avatar" style="background:#14B8A6;">QR</div>
+        <div class="league-name">QR_move</div>
+        <span class="delta-chip delta-up">+3 ↑</span>
+        <div class="league-pts">352 XP</div>
+      </div>
+
+      <div class="divider" style="margin:6px 0;"></div>
+
+      <!-- YOU — center highlight -->
+      <div class="league-row you" style="margin: 4px 0;">
+        <div class="league-rank" style="color:var(--action);">7</div>
+        <div class="league-avatar" style="background:var(--action);">RN</div>
+        <div class="league-name" style="color:var(--action);font-weight:700;">You (RealNick)</div>
+        <span class="delta-chip delta-you">⬤ You</span>
+        <div class="league-pts" style="font-size:.9rem;">340 XP</div>
+      </div>
+
+      <div style="text-align:center;font-size:.72rem;color:var(--text-muted);margin:6px 0 4px;padding:4px 0;">
+        ↑ 12 XP behind 6th place
+      </div>
+      <div class="divider" style="margin:6px 0;"></div>
+
+      <!-- Ranks 8-10: just below user -->
+      <div class="league-row">
+        <div class="league-rank">8</div>
+        <div class="league-avatar" style="background:#F97316;">BH</div>
+        <div class="league-name">BH_calm</div>
+        <span class="delta-chip delta-down">-4 ↓</span>
+        <div class="league-pts">325 XP</div>
+      </div>
+      <div class="league-row">
+        <div class="league-rank">9</div>
+        <div class="league-avatar" style="background:#6366F1;">CN</div>
+        <div class="league-name">CN_slow</div>
+        <span class="delta-chip delta-up">+6 ↑</span>
+        <div class="league-pts">310 XP</div>
+      </div>
+      <div class="league-row">
+        <div class="league-rank">10</div>
+        <div class="league-avatar" style="background:#A855F7;">ZZ</div>
+        <div class="league-name">ZZ_start</div>
+        <span class="delta-chip delta-up">+2 ↑</span>
+        <div class="league-pts">296 XP</div>
+      </div>
+    </div>
+
+    <!-- Accountability Tip -->
+    <div class="card mt-12" style="background:var(--success-light); border-color:#6EE7B7;">
+      <div class="flex items-center gap-12">
+        <span style="font-size:1.5rem;">💡</span>
+        <p style="font-size:.8rem; color:var(--text-primary);">Complete <strong>2 more goals today</strong> to overtake rank 6. You're closer than you think.</p>
+      </div>
+    </div>
+
+    <div style="height:24px;"></div>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <span class="nav-brand" style="display:none;">Baseline.</span>
+    <a href="index.html"   class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a>
+    <a href="social.html"  class="nav-item active"><span class="nav-icon">📈</span><span class="nav-label">Progress</span></a>
+    <a href="realize.html" class="nav-item"><span class="nav-icon">💡</span><span class="nav-label">Guide</span></a>
+    <a href="goals.html"   class="nav-item"><span class="nav-icon">🗺️</span><span class="nav-label">Paths</span></a>
+  </nav>
+
+  <script src="layout.js"></script>
+</body>
+</html>
