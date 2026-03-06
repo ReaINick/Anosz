@@ -14,8 +14,6 @@
       flex-direction: column;
       min-height: 100dvh;
     }
-
-    /* ── Full-viewport auth shell ── */
     .auth-shell {
       flex: 1;
       display: flex;
@@ -25,8 +23,6 @@
       padding: var(--space-lg) var(--space-md);
       min-height: 100dvh;
     }
-
-    /* ── View containers ── */
     .auth-view {
       width: 100%;
       max-width: 420px;
@@ -34,7 +30,7 @@
     }
     .auth-view.hidden { display: none; }
 
-    /* ── Landing: top brand block ── */
+    /* Landing */
     .landing-brand {
       text-align: center;
       margin-bottom: var(--space-xl);
@@ -47,30 +43,18 @@
       color: var(--onyx);
     }
     .landing-logo span { color: var(--royal-blue); }
-    .landing-dot {
-      display: inline-block;
-      width: 10px; height: 10px;
-      background: var(--royal-blue);
-      border-radius: 50%;
-      margin-left: 3px;
-      vertical-align: middle;
-      position: relative;
-      bottom: 4px;
-    }
     .landing-tagline {
       font-size: 0.95rem;
       color: var(--text-secondary);
       margin-top: var(--space-sm);
       font-weight: 500;
-      line-height: 1.5;
+      line-height: 1.6;
     }
-
-    /* ── Landing: choice card ── */
     .choice-card {
       background: var(--platinum);
       border: var(--border-width) var(--border-style);
       border-radius: var(--radius-lg);
-      padding: var(--space-xl) var(--space-xl);
+      padding: var(--space-xl);
       box-shadow: var(--card-shadow-lg);
     }
     .choice-question {
@@ -79,7 +63,6 @@
       text-align: center;
       margin-bottom: var(--space-lg);
       color: var(--text-primary);
-      letter-spacing: -0.2px;
     }
     .choice-buttons {
       display: flex;
@@ -88,9 +71,8 @@
     }
     .choice-btn {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 4px;
+      align-items: center;
+      gap: var(--space-md);
       padding: var(--space-md) var(--space-lg);
       border-radius: var(--radius-sm);
       border: var(--border-width) var(--border-style);
@@ -100,63 +82,27 @@
       text-align: left;
       width: 100%;
     }
-    .choice-btn .btn-headline {
-      font-size: 1rem;
-      font-weight: 800;
-      line-height: 1.2;
-    }
-    .choice-btn .btn-sub {
-      font-size: 0.76rem;
-      font-weight: 500;
-      opacity: 0.8;
-    }
+    .choice-btn-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .choice-btn-text { flex: 1; }
+    .choice-btn .btn-headline { font-size: 1rem; font-weight: 800; line-height: 1.2; }
+    .choice-btn .btn-sub      { font-size: 0.76rem; font-weight: 500; margin-top: 2px; opacity: 0.82; }
+    .choice-arrow { font-size: 1rem; flex-shrink: 0; }
     .choice-btn-new {
       background: var(--royal-blue);
       color: #fff;
       box-shadow: var(--btn-shadow);
     }
-    .choice-btn-new:hover {
-      background: var(--action-hover);
-      transform: translate(-1px, -1px);
-      box-shadow: 4px 4px 0 var(--onyx);
-    }
-    .choice-btn-new:active {
-      transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0 var(--onyx);
-    }
+    .choice-btn-new:hover  { background: var(--action-hover); transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--onyx); }
+    .choice-btn-new:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--onyx); }
     .choice-btn-returning {
       background: var(--platinum);
       color: var(--text-primary);
       box-shadow: var(--btn-shadow);
     }
-    .choice-btn-returning:hover {
-      background: var(--surface-inset);
-      transform: translate(-1px, -1px);
-      box-shadow: 4px 4px 0 var(--onyx);
-    }
-    .choice-btn-returning:active {
-      transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0 var(--onyx);
-    }
-    .choice-arrow {
-      margin-left: auto;
-      font-size: 1rem;
-      align-self: center;
-      flex-shrink: 0;
-    }
-    .choice-btn-inner {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      gap: var(--space-sm);
-    }
-    .choice-btn-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .choice-btn-text { flex: 1; }
+    .choice-btn-returning:hover  { background: var(--surface-inset); transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--onyx); }
+    .choice-btn-returning:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--onyx); }
 
-    /* ── Login / Register: form card ── */
+    /* Form card */
     .form-card {
       background: var(--platinum);
       border: var(--border-width) var(--border-style);
@@ -178,124 +124,73 @@
       box-shadow: 2px 2px 0 var(--onyx);
       display: flex; align-items: center; justify-content: center;
       font-size: 1rem; flex-shrink: 0;
-      transition: var(--transition);
-      cursor: pointer;
+      transition: var(--transition); cursor: pointer;
     }
-    .back-btn:hover {
-      transform: translate(-1px, -1px);
-      box-shadow: 3px 3px 0 var(--onyx);
+    .back-btn:hover  { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 var(--onyx); }
+    .back-btn:active { transform: translate(1px,1px); box-shadow: none; }
+    .form-card-title { font-size: 1.3rem; font-weight: 900; letter-spacing: -0.4px; }
+    .form-card-sub   { font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px; }
+
+    /* Input with icon */
+    .input-icon-wrap { position: relative; }
+    .input-icon-wrap .form-input { padding-left: 40px; }
+    .input-icon-wrap .input-icon {
+      position: absolute; left: 13px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem; pointer-events: none;
     }
-    .back-btn:active {
-      transform: translate(1px, 1px);
-      box-shadow: none;
+    .input-icon-wrap .pw-toggle {
+      position: absolute; right: 12px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.75rem; font-weight: 700;
+      color: var(--dim-grey); cursor: pointer;
+      padding: 4px; background: none; border: none;
+      font-family: inherit;
     }
-    .form-card-title   { font-size: 1.3rem; font-weight: 900; letter-spacing: -0.4px; }
-    .form-card-sub     { font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px; }
 
     /* Password strength */
     .pw-strength-bar {
-      height: 4px;
-      background: var(--surface-inset);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-top: var(--space-xs);
+      height: 4px; background: var(--surface-inset);
+      border-radius: 2px; overflow: hidden; margin-top: var(--space-xs);
     }
     .pw-strength-fill {
-      height: 100%;
-      border-radius: 2px;
-      width: 0%;
-      transition: width 0.3s var(--ease-out), background 0.3s;
+      height: 100%; border-radius: 2px;
+      width: 0%; transition: width 0.3s var(--ease-out), background 0.3s;
     }
     .pw-strength-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      margin-top: 3px;
-      color: var(--text-secondary);
+      font-size: 0.68rem; font-weight: 700;
+      margin-top: 3px; color: var(--text-secondary);
     }
 
-    /* ── Footer note ── */
-    .auth-footer-note {
-      text-align: center;
-      font-size: 0.72rem;
-      color: var(--text-secondary);
-      margin-top: var(--space-md);
-      padding: 0 var(--space-md);
-    }
-
-    /* ── New-user journey steps ── */
+    /* Journey steps */
     .journey-steps {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+      display: flex; align-items: center;
+      justify-content: center; gap: 6px;
       margin-bottom: var(--space-xl);
     }
-    .journey-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
+    .journey-step { display: flex; flex-direction: column; align-items: center; gap: 4px; }
     .step-dot {
-      width: 28px; height: 28px;
-      border-radius: var(--radius-xs);
+      width: 28px; height: 28px; border-radius: var(--radius-xs);
       border: var(--border-width) var(--border-style);
       display: flex; align-items: center; justify-content: center;
       font-size: 0.72rem; font-weight: 900;
-      background: var(--surface-inset);
-      color: var(--text-secondary);
+      background: var(--surface-inset); color: var(--text-secondary);
     }
-    .step-dot.active {
-      background: var(--royal-blue);
-      color: #fff;
-      border-color: var(--onyx);
-      box-shadow: 2px 2px 0 var(--onyx);
-    }
-    .step-dot.done {
-      background: var(--success);
-      color: #fff;
-      border-color: var(--onyx);
-    }
-    .step-label {
-      font-size: 0.6rem;
-      font-weight: 700;
-      color: var(--text-secondary);
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-    }
-    .step-connector {
-      width: 24px; height: 2px;
-      background: var(--border-subtle);
-      margin-bottom: 14px;
-      border-radius: 1px;
-    }
+    .step-dot.active { background: var(--royal-blue); color: #fff; box-shadow: 2px 2px 0 var(--onyx); }
+    .step-dot.done   { background: var(--success); color: #fff; }
+    .step-label { font-size: 0.6rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.3px; }
+    .step-connector { width: 24px; height: 2px; background: var(--border-subtle); margin-bottom: 14px; border-radius: 1px; }
     .step-connector.done { background: var(--success); }
 
-    /* ── Input row (icon + field) ── */
-    .input-icon-wrap {
-      position: relative;
+    /* Footer note */
+    .auth-footer-note {
+      text-align: center; font-size: 0.72rem;
+      color: var(--text-secondary); margin-top: var(--space-md);
     }
-    .input-icon-wrap .form-input {
-      padding-left: 40px;
-    }
-    .input-icon-wrap .input-icon {
-      position: absolute;
-      left: 13px; top: 50%;
-      transform: translateY(-50%);
-      font-size: 1rem;
-      pointer-events: none;
-    }
-    .input-icon-wrap .pw-toggle {
-      position: absolute;
-      right: 12px; top: 50%;
-      transform: translateY(-50%);
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--dim-grey);
-      cursor: pointer;
-      padding: 4px;
-      background: none;
-      border: none;
+    .auth-footer-note button {
+      color: var(--royal-blue); font-weight: 700;
+      font-size: inherit; cursor: pointer;
+      background: none; border: none; font-family: inherit;
     }
   </style>
 </head>
@@ -303,15 +198,13 @@
 
 <div class="auth-shell">
 
-  <!-- ════════════════════════════════════════
+  <!-- ════════════════════
        VIEW 1 — LANDING
-       ════════════════════════════════════════ -->
+       ════════════════════ -->
   <div class="auth-view" id="view-landing">
 
     <div class="landing-brand">
-      <div class="landing-logo">
-        The Baseline<span>.</span>
-      </div>
+      <div class="landing-logo">The Baseline<span>.</span></div>
       <p class="landing-tagline">
         Build the identity of someone who follows through.<br/>
         One minute at a time.
@@ -322,43 +215,35 @@
       <p class="choice-question">Have we met before?</p>
       <div class="choice-buttons">
 
-        <!-- "I'm new here" → realize.html -->
         <button class="choice-btn choice-btn-new" id="btn-new">
-          <div class="choice-btn-inner">
-            <span class="choice-btn-icon">🚀</span>
-            <div class="choice-btn-text">
-              <div class="btn-headline">I'm new here</div>
-              <div class="btn-sub">Start your journey — takes 3 minutes</div>
-            </div>
-            <span class="choice-arrow">→</span>
+          <span class="choice-btn-icon">🚀</span>
+          <div class="choice-btn-text">
+            <div class="btn-headline">I'm new here</div>
+            <div class="btn-sub">Start your journey — takes 3 minutes</div>
           </div>
+          <span class="choice-arrow">→</span>
         </button>
 
-        <!-- "I've been here before" → login view -->
         <button class="choice-btn choice-btn-returning" id="btn-returning">
-          <div class="choice-btn-inner">
-            <span class="choice-btn-icon">🔑</span>
-            <div class="choice-btn-text">
-              <div class="btn-headline">I've been here before</div>
-              <div class="btn-sub">Log back in and pick up your streak</div>
-            </div>
-            <span class="choice-arrow">→</span>
+          <span class="choice-btn-icon">🔑</span>
+          <div class="choice-btn-text">
+            <div class="btn-headline">I've been here before</div>
+            <div class="btn-sub">Log back in and pick up your streak</div>
           </div>
+          <span class="choice-arrow">→</span>
         </button>
 
       </div>
     </div>
 
-    <p class="auth-footer-note">
-      Free to use. No tracking. Just progress.
-    </p>
+    <p class="auth-footer-note">Free to use. No tracking. Just progress.</p>
 
-  </div><!-- /view-landing -->
+  </div>
 
 
-  <!-- ════════════════════════════════════════
+  <!-- ════════════════════
        VIEW 2 — LOGIN
-       ════════════════════════════════════════ -->
+       ════════════════════ -->
   <div class="auth-view hidden" id="view-login">
 
     <div class="form-card">
@@ -376,37 +261,28 @@
           <label class="form-label" for="login-username">Username</label>
           <div class="input-icon-wrap">
             <span class="input-icon" aria-hidden="true">👤</span>
-            <input
-              class="form-input"
-              type="text"
-              id="login-username"
-              name="username"
-              placeholder="your_username"
-              autocomplete="username"
-              required
-            />
+            <input class="form-input" type="text" id="login-username"
+              name="username" placeholder="your_username"
+              autocomplete="username" required/>
           </div>
         </div>
 
         <div class="form-group">
           <label class="form-label" for="login-password">
             Password
-            <span style="font-weight:400; color:var(--text-secondary); margin-left:8px; font-size:.72rem; text-transform:none; letter-spacing:0;">
-              <a id="forgot-link" href="#" style="color:var(--royal-blue);">Forgot it?</a>
-            </span>
+            <a id="forgot-link" href="#"
+              style="font-weight:400;color:var(--royal-blue);margin-left:8px;
+                     font-size:.72rem;text-transform:none;letter-spacing:0;">
+              Forgot it?
+            </a>
           </label>
           <div class="input-icon-wrap">
             <span class="input-icon" aria-hidden="true">🔒</span>
-            <input
-              class="form-input"
-              type="password"
-              id="login-password"
-              name="password"
-              placeholder="••••••••"
-              autocomplete="current-password"
-              required
-            />
-            <button type="button" class="pw-toggle" data-target="login-password" aria-label="Show password">Show</button>
+            <input class="form-input" type="password" id="login-password"
+              name="password" placeholder="••••••••"
+              autocomplete="current-password" required/>
+            <button type="button" class="pw-toggle"
+              data-target="login-password" aria-label="Toggle password">Show</button>
           </div>
         </div>
 
@@ -418,25 +294,22 @@
 
       </form>
 
-      <div style="text-align:center; margin-top:var(--space-lg); font-size:0.78rem; color:var(--text-secondary);">
+      <p class="auth-footer-note mt-16">
         New here?
-        <button id="switch-to-register" style="color:var(--royal-blue); font-weight:700; font-size:0.78rem; cursor:pointer;">
-          Create an account
-        </button>
-      </div>
+        <button id="switch-to-register">Create an account</button>
+      </p>
 
     </div>
 
-  </div><!-- /view-login -->
+  </div>
 
 
-  <!-- ════════════════════════════════════════
+  <!-- ════════════════════
        VIEW 3 — REGISTER
-       (Reached via realize.html CTA)
-       ════════════════════════════════════════ -->
+       (Arrived from realize.html CTA)
+       ════════════════════ -->
   <div class="auth-view hidden" id="view-register">
 
-    <!-- Journey progress indicator -->
     <div class="journey-steps">
       <div class="journey-step">
         <div class="step-dot done">✓</div>
@@ -474,16 +347,9 @@
           <label class="form-label" for="reg-username">Username</label>
           <div class="input-icon-wrap">
             <span class="input-icon" aria-hidden="true">👤</span>
-            <input
-              class="form-input"
-              type="text"
-              id="reg-username"
-              name="username"
-              placeholder="choose_a_username"
-              autocomplete="username"
-              maxlength="24"
-              required
-            />
+            <input class="form-input" type="text" id="reg-username"
+              name="username" placeholder="choose_a_username"
+              autocomplete="username" maxlength="24" required/>
           </div>
           <span class="form-hint">This is your anonymous league name — choose wisely.</span>
         </div>
@@ -492,15 +358,9 @@
           <label class="form-label" for="reg-email">Email</label>
           <div class="input-icon-wrap">
             <span class="input-icon" aria-hidden="true">✉️</span>
-            <input
-              class="form-input"
-              type="email"
-              id="reg-email"
-              name="email"
-              placeholder="you@example.com"
-              autocomplete="email"
-              required
-            />
+            <input class="form-input" type="email" id="reg-email"
+              name="email" placeholder="you@example.com"
+              autocomplete="email" required/>
           </div>
         </div>
 
@@ -508,17 +368,11 @@
           <label class="form-label" for="reg-password">Password</label>
           <div class="input-icon-wrap">
             <span class="input-icon" aria-hidden="true">🔒</span>
-            <input
-              class="form-input"
-              type="password"
-              id="reg-password"
-              name="password"
-              placeholder="min. 8 characters"
-              autocomplete="new-password"
-              minlength="8"
-              required
-            />
-            <button type="button" class="pw-toggle" data-target="reg-password" aria-label="Show password">Show</button>
+            <input class="form-input" type="password" id="reg-password"
+              name="password" placeholder="min. 8 characters"
+              autocomplete="new-password" minlength="8" required/>
+            <button type="button" class="pw-toggle"
+              data-target="reg-password" aria-label="Toggle password">Show</button>
           </div>
           <div class="pw-strength-bar">
             <div class="pw-strength-fill" id="pw-strength-fill"></div>
@@ -527,18 +381,12 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="reg-password-confirm">Confirm Password</label>
+          <label class="form-label" for="reg-pw-confirm">Confirm Password</label>
           <div class="input-icon-wrap">
             <span class="input-icon" aria-hidden="true">✅</span>
-            <input
-              class="form-input"
-              type="password"
-              id="reg-password-confirm"
-              name="password-confirm"
-              placeholder="repeat password"
-              autocomplete="new-password"
-              required
-            />
+            <input class="form-input" type="password" id="reg-pw-confirm"
+              name="password-confirm" placeholder="repeat password"
+              autocomplete="new-password" required/>
           </div>
         </div>
 
@@ -550,23 +398,24 @@
 
       </form>
 
-      <p class="auth-footer-note mt-16" style="font-size:.7rem;">
+      <p class="auth-footer-note mt-16">
         Already have an account?
-        <button id="switch-to-login" style="color:var(--royal-blue); font-weight:700; font-size:.7rem; cursor:pointer;">
-          Log in instead
-        </button>
+        <button id="switch-to-login">Log in instead</button>
       </p>
 
     </div>
 
-  </div><!-- /view-register -->
+  </div>
 
 </div><!-- /auth-shell -->
 
 
 <script src="layout.js"></script>
 <script>
-/* ── Auth View Manager ───────────────────────────────── */
+/* ── Auth View Manager
+   NOTE: Store and showToast are already declared globally
+   by layout.js — do NOT re-declare them here.
+   ──────────────────────────────────────────────────── */
 
 const VIEWS = {
   landing  : document.getElementById('view-landing'),
@@ -575,212 +424,196 @@ const VIEWS = {
 };
 
 function showView(name) {
-  Object.values(VIEWS).forEach(v => v?.classList.add('hidden'));
-  VIEWS[name]?.classList.remove('hidden');
-  // Sync URL hash without triggering a reload
-  history.replaceState(null, '', name === 'landing' ? '#' : `#${name}`);
-  // Focus first input if a form view
-  setTimeout(() => {
-    const first = VIEWS[name]?.querySelector('input:not([type="hidden"])');
-    first?.focus();
-  }, 60);
+  Object.values(VIEWS).forEach(v => v && v.classList.add('hidden'));
+  const target = VIEWS[name];
+  if (target) {
+    target.classList.remove('hidden');
+    // Refocus first input for accessibility
+    const firstInput = target.querySelector('input:not([type="hidden"])');
+    if (firstInput) setTimeout(() => firstInput.focus(), 60);
+  }
+  history.replaceState(null, '', name === 'landing' ? location.pathname : '#' + name);
 }
 
-// ── Routing: check URL hash on load ──────────────────
+/* ── Route on load ── */
 (function routeOnLoad() {
   const hash = window.location.hash.slice(1);
-  if (hash === 'register') { showView('register'); return; }
-  if (hash === 'login')    { showView('login');    return; }
-  showView('landing');
-})();
+  if      (hash === 'register') showView('register');
+  else if (hash === 'login')    showView('login');
+  else                          showView('landing');
+}());
 
-/* ── Landing buttons ─────────────────────────────────── */
-
-document.getElementById('btn-new').addEventListener('click', () => {
-  // New users read the guide first — realize.html CTA will return them to #register
+/* ── Landing buttons ── */
+document.getElementById('btn-new').addEventListener('click', function () {
   window.location.href = 'realize.html';
 });
 
-document.getElementById('btn-returning').addEventListener('click', () => {
+document.getElementById('btn-returning').addEventListener('click', function () {
   showView('login');
 });
 
-/* ── Back buttons ────────────────────────────────────── */
-
-document.getElementById('login-back-btn').addEventListener('click', () => {
+/* ── Back buttons ── */
+document.getElementById('login-back-btn').addEventListener('click', function () {
   showView('landing');
 });
 
-document.getElementById('register-back-btn').addEventListener('click', () => {
-  // New users came from realize.html — go back there
-  history.back();
+document.getElementById('register-back-btn').addEventListener('click', function () {
+  // User arrived from realize.html — go back there
+  if (document.referrer.includes('realize')) {
+    history.back();
+  } else {
+    window.location.href = 'realize.html';
+  }
 });
 
-/* ── Cross-link switches ─────────────────────────────── */
-
-document.getElementById('switch-to-register').addEventListener('click', () => {
+/* ── Cross-link switches ── */
+document.getElementById('switch-to-register').addEventListener('click', function () {
   showView('register');
 });
-document.getElementById('switch-to-login').addEventListener('click', () => {
+document.getElementById('switch-to-login').addEventListener('click', function () {
   showView('login');
 });
 
-/* ── Password visibility toggle ─────────────────────── */
-
-document.querySelectorAll('.pw-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const input = document.getElementById(btn.dataset.target);
+/* ── Password visibility toggles ── */
+document.querySelectorAll('.pw-toggle').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var input = document.getElementById(btn.dataset.target);
     if (!input) return;
-    const isHidden = input.type === 'password';
-    input.type       = isHidden ? 'text' : 'password';
-    btn.textContent  = isHidden ? 'Hide' : 'Show';
+    var hidden   = input.type === 'password';
+    input.type   = hidden ? 'text' : 'password';
+    btn.textContent = hidden ? 'Hide' : 'Show';
   });
 });
 
-/* ── Password Strength Meter ─────────────────────────── */
+/* ── Password strength meter ── */
+var pwInput       = document.getElementById('reg-password');
+var strengthFill  = document.getElementById('pw-strength-fill');
+var strengthLabel = document.getElementById('pw-strength-label');
 
-const pwInput       = document.getElementById('reg-password');
-const strengthFill  = document.getElementById('pw-strength-fill');
-const strengthLabel = document.getElementById('pw-strength-label');
-
-const STRENGTH_LEVELS = [
-  { score: 0,  label: '',          color: 'transparent', width: '0%'   },
-  { score: 1,  label: 'Too short', color: '#c0392b',     width: '20%'  },
-  { score: 2,  label: 'Weak',      color: '#e67e22',     width: '40%'  },
-  { score: 3,  label: 'Fair',      color: '#f1c40f',     width: '60%'  },
-  { score: 4,  label: 'Good',      color: '#27ae60',     width: '80%'  },
-  { score: 5,  label: 'Strong ✓',  color: '#0066f5',     width: '100%' },
+var STRENGTH_LEVELS = [
+  { label: '',          color: 'transparent', width: '0%'   },
+  { label: 'Too short', color: '#c0392b',     width: '20%'  },
+  { label: 'Weak',      color: '#e67e22',     width: '40%'  },
+  { label: 'Fair',      color: '#f1c40f',     width: '60%'  },
+  { label: 'Good',      color: '#27ae60',     width: '80%'  },
+  { label: 'Strong ✓',  color: '#0066f5',     width: '100%' },
 ];
 
 function scorePassword(pw) {
   if (!pw || pw.length < 8) return 1;
-  let score = 1;
-  if (pw.length >= 12)             score++;
-  if (/[A-Z]/.test(pw))            score++;
-  if (/[0-9]/.test(pw))            score++;
-  if (/[^A-Za-z0-9]/.test(pw))     score++;
+  var score = 1;
+  if (pw.length >= 12)          score++;
+  if (/[A-Z]/.test(pw))         score++;
+  if (/[0-9]/.test(pw))         score++;
+  if (/[^A-Za-z0-9]/.test(pw))  score++;
   return Math.min(score, 5);
 }
 
-pwInput?.addEventListener('input', () => {
-  const score = scorePassword(pwInput.value);
-  const level = STRENGTH_LEVELS[score] || STRENGTH_LEVELS[0];
-  if (strengthFill)  {
-    strengthFill.style.width      = level.width;
-    strengthFill.style.background = level.color;
-  }
-  if (strengthLabel) {
-    strengthLabel.textContent = level.label;
-    strengthLabel.style.color = level.color;
-  }
-});
+if (pwInput) {
+  pwInput.addEventListener('input', function () {
+    var level = STRENGTH_LEVELS[scorePassword(pwInput.value)] || STRENGTH_LEVELS[0];
+    if (strengthFill) {
+      strengthFill.style.width      = level.width;
+      strengthFill.style.background = level.color;
+    }
+    if (strengthLabel) {
+      strengthLabel.textContent = level.label;
+      strengthLabel.style.color = level.color;
+    }
+  });
+}
 
-/* ── Login Form Submission → index.html ─────────────── */
-
-document.getElementById('login-form').addEventListener('submit', function(e) {
+/* ── Login form → index.html ── */
+document.getElementById('login-form').addEventListener('submit', function (e) {
   e.preventDefault();
-  clearError('login-error');
+  clearFormError('login-error');
 
-  const username = this.querySelector('#login-username').value.trim();
-  const password = this.querySelector('#login-password').value;
+  var username = document.getElementById('login-username').value.trim();
+  var password = document.getElementById('login-password').value;
 
-  if (!username) { showError('login-error', 'Please enter your username.'); return; }
-  if (!password) { showError('login-error', 'Please enter your password.'); return; }
+  if (!username) { showFormError('login-error', 'Please enter your username.');  return; }
+  if (!password) { showFormError('login-error', 'Please enter your password.');  return; }
 
-  // Save session data
   Store.set('baseline_username', username);
 
-  // Submit button: loading state
-  const btn = this.querySelector('[type="submit"]');
+  var btn = this.querySelector('[type="submit"]');
   btn.textContent = 'Logging in…';
   btn.disabled    = true;
 
-  setTimeout(() => { window.location.href = 'index.html'; }, 400);
+  setTimeout(function () { window.location.href = 'index.html'; }, 400);
 });
 
-/* ── Register Form Submission → calibrate.html ─────── */
-
-document.getElementById('register-form').addEventListener('submit', function(e) {
+/* ── Register form → calibrate.html ── */
+document.getElementById('register-form').addEventListener('submit', function (e) {
   e.preventDefault();
-  clearError('register-error');
+  clearFormError('register-error');
 
-  const username = this.querySelector('#reg-username').value.trim();
-  const email    = this.querySelector('#reg-email').value.trim();
-  const password = this.querySelector('#reg-password').value;
-  const confirm  = this.querySelector('#reg-password-confirm').value;
+  var username = document.getElementById('reg-username').value.trim();
+  var email    = document.getElementById('reg-email').value.trim();
+  var password = document.getElementById('reg-password').value;
+  var confirm  = document.getElementById('reg-pw-confirm').value;
 
-  // Validation chain
   if (!username || username.length < 3) {
-    showError('register-error', 'Username must be at least 3 characters.');
+    showFormError('register-error', 'Username must be at least 3 characters.');
     document.getElementById('reg-username').focus();
     return;
   }
   if (!/^[a-zA-Z0-9_]+$/.test(username)) {
-    showError('register-error', 'Username can only contain letters, numbers, and underscores.');
+    showFormError('register-error', 'Username: letters, numbers, and underscores only.');
     document.getElementById('reg-username').focus();
     return;
   }
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    showError('register-error', 'Please enter a valid email address.');
+    showFormError('register-error', 'Please enter a valid email address.');
     document.getElementById('reg-email').focus();
     return;
   }
   if (password.length < 8) {
-    showError('register-error', 'Password must be at least 8 characters.');
+    showFormError('register-error', 'Password must be at least 8 characters.');
     document.getElementById('reg-password').focus();
     return;
   }
   if (password !== confirm) {
-    showError('register-error', 'Passwords do not match — please re-enter.');
-    document.getElementById('reg-password-confirm').focus();
+    showFormError('register-error', 'Passwords do not match — please re-enter.');
+    document.getElementById('reg-pw-confirm').focus();
     return;
   }
 
-  // Fresh account — initialise storage
+  // Initialise fresh account in localStorage
   Store.set('baseline_username', username);
   Store.set('baseline_xp',       0);
   Store.set('baseline_streak',   0);
-  Store.set('baseline_skills',   null); // will be seeded by layout.js defaults
+  Store.remove('baseline_last_date');
+  Store.remove('baseline_tasks_today');
 
-  // Loading state
-  const btn = this.querySelector('[type="submit"]');
+  var btn = this.querySelector('[type="submit"]');
   btn.textContent = 'Creating account…';
   btn.disabled    = true;
 
-  setTimeout(() => { window.location.href = 'calibrate.html'; }, 450);
+  setTimeout(function () { window.location.href = 'calibrate.html'; }, 450);
 });
 
-/* ── Forgot password (placeholder) ──────────────────── */
+/* ── Forgot password placeholder ── */
+var forgotLink = document.getElementById('forgot-link');
+if (forgotLink) {
+  forgotLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    showToast('🔧 Password reset coming soon.');
+  });
+}
 
-document.getElementById('forgot-link')?.addEventListener('click', e => {
-  e.preventDefault();
-  showToast('🔧 Password reset coming soon — check your email on file.');
-});
-
-/* ── Error helpers ───────────────────────────────────── */
-
-function showError(id, msg) {
-  const el = document.getElementById(id);
+/* ── Form error helpers ── */
+function showFormError(id, msg) {
+  var el = document.getElementById(id);
   if (!el) return;
-  el.textContent    = '⚠️ ' + msg;
-  el.style.display  = 'block';
+  el.textContent   = '⚠️  ' + msg;
+  el.style.display = 'block';
   el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
-function clearError(id) {
-  const el = document.getElementById(id);
+function clearFormError(id) {
+  var el = document.getElementById(id);
   if (el) { el.textContent = ''; el.style.display = 'none'; }
 }
-
-/* ── Store reference (layout.js exposes nothing globally
-      before DOMContentLoaded, so we alias it safely) ── */
-const Store = (() => {
-  const get = (k, fb = null) => {
-    try { const v = localStorage.getItem(k); return v === null ? fb : JSON.parse(v); }
-    catch { return fb; }
-  };
-  const set = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
-  return { get, set };
-})();
 </script>
 </body>
 </html>
